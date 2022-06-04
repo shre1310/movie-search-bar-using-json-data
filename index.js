@@ -1,5 +1,13 @@
-const userCardTemplate = document.querySelector("[data-user-template")  
-const userCardContainer = document.querySelector("[data-user-cards-container]")
+const searchInput =document.querySelector("[data-search]")
+
+let users = []
+
+searchInput.addEventListener("input", e =>{
+  const value = e.target.valueu
+  users.forEach(user => {
+    const isVisible = user.name.includes(value)
+  })
+})
 
         fetch("movies.json")
           .then(res => res.json())
